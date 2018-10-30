@@ -17,7 +17,16 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
 	{
-        float speed = (normalSpeed + Input.GetAxis("Vertical") * boostSpeed) * Time.deltaTime;
+        int push = 0;
+        if (Input.touches.Length > 0)
+        {
+            if (Input.touches[0].phase != TouchPhase.Ended)
+                push = 1;
+            Debug.Log("Push!");
+        }
+            
+
+        float speed = (normalSpeed + Input.GetAxis("Vertical") * boostSpeed + push * boostSpeed) * Time.deltaTime;
         transform.parent.Translate(0, 0, speed);
         transform.Rotate(new Vector3(speed * rotationSpeed, 0, 0));
 	}
