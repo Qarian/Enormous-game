@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour {
     public float normalSpeed = 0f;
     public float boostSpeed = 20f;
     public float rotationSpeed = 10f;
+    public float acceleration = 10f;
+
+    float speed;
 
     void Start()
     {
@@ -23,13 +26,11 @@ public class PlayerController : MonoBehaviour {
             if (Input.touches[0].phase != TouchPhase.Ended)
                 push = 1f;
         }
-        //push += Input.GetAxis("Vertical");
+        push = Input.GetAxis("Vertical");
 
-
-
-        float speed = Mathf.Lerp(normalSpeed, boostSpeed, normalSpeed + push * boostSpeed);
+        speed = Mathf.Lerp(speed, normalSpeed + push * boostSpeed, acceleration) * Time.deltaTime;
         Debug.Log(speed);
-        transform.parent.Translate(0, 0, speed * Time.deltaTime);
+        transform.parent.Translate(0, 0, speed);
         transform.Rotate(new Vector3(speed * rotationSpeed, 0, 0));
 	}
 
