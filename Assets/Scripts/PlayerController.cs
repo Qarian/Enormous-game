@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour {
             if (Input.touches[0].phase != TouchPhase.Ended)
                 push = 1f;
         }
-        push = Input.GetAxis("Vertical");
+        push += Input.GetAxis("Vertical");
 
         speed = Mathf.Lerp(speed, normalSpeed + push * boostSpeed, acceleration) * Time.deltaTime;
         Debug.Log(speed);
