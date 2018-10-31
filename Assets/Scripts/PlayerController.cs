@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
     public float rotationSpeed = 10f;
     public float acceleration = 10f;
 
-    float speed;
+    float speed = 0f;
 
     void Start()
     {
@@ -20,24 +20,31 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
 	{
-        float push = 0;
+        SetSpeed();
+
+        transform.parent.Translate(0, 0, speed * Time.deltaTime);
+        transform.Rotate(new Vector3(speed * rotationSpeed * Time.deltaTime, 0, 0));
+	}
+
+    void SetSpeed()
+    {
+        float designatedSpeed = normalSpeed;
         if (Input.touches.Length > 0)
         {
             if (Input.touches[0].phase != TouchPhase.Ended)
-                push = 1f;
+                designatedSpeed = boostSpeed;
         }
-        push += Input.GetAxisRaw("Vertical");
+        //by dzialalo na komputerze
+        designatedSpeed += Input.GetAxisRaw("Vertical") * (-normalSpeed + boostSpeed);
 
-        speed = Mathf.Lerp(speed, normalSpeed + push * boostSpeed, acceleration) * Time.deltaTime;
-        Debug.Log(speed);
-        transform.parent.Translate(0, 0, speed);
-        transform.Rotate(new Vector3(speed * rotationSpeed, 0, 0));
-	}
+        speed += (designatedSpeed - speed) * acceleration * Time.deltaTime;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         rb.useGravity = true;
         mainCamera.parent = null;
         road.parent = null;
+        enabled = false;
     }
 }
