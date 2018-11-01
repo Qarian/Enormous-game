@@ -3,8 +3,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new Combination", menuName = "New/Combination")]
 public class Combination : ScriptableObject {
 
-    public Element[] elements;
     public float freeSpace = 5f;
+    [Space]
+    public Element[] elements;
 }
 
 [System.Serializable]
