@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Blockade : MonoBehaviour {
 
+    public int prefab;
     public float speed = 100f;
 	
 	void Update ()

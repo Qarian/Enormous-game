@@ -40,11 +40,25 @@ public class PlayerController : MonoBehaviour {
         speed += (designatedSpeed - speed) * acceleration * Time.deltaTime;
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        rb.useGravity = true;
-        mainCamera.parent = null;
-        road.parent = null;
-        enabled = false;
+        if (other.tag == "CombinationStart")
+        {
+            NextCombination();
+        }
+            
+        else
+        {
+            rb.useGravity = true;
+            mainCamera.parent = null;
+            road.parent = null;
+            enabled = false;
+        }
     }
+
+    void NextCombination()
+    {
+        Generator.singleton.NewCombination();
+    }
+
 }
