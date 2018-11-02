@@ -40,7 +40,7 @@ public class CombinationEditor : Editor {
         }
         else
         {
-            Debug.LogError("This don't look like combination");
+            Debug.LogError("This don't look like combination. Check if prefab is in 'Combination Start' family");
         }
     }
 

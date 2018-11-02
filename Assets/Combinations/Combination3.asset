@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bcdf770a6e5e3f409f357b8af41a5c9, type: 3}
+  m_Name: Combination3
+  m_EditorClassIdentifier: 
+  freeSpace: 5
+  elements:
+  - prefab: 1
+    positionZ: 0
+    speed: -100
+    rotation: {x: -0, y: -0, z: -0, w: 1}
+  - prefab: 1
+    positionZ: 1
+    speed: -100
+    rotation: {x: -0, y: -0, z: -0.17364825, w: 0.9848078}
+  - prefab: 1
+    positionZ: 2
+    speed: -100
+    rotation: {x: -0, y: -0, z: -0.3420201, w: 0.9396927}
+  - prefab: 1
+    positionZ: 3
+    speed: -100
+    rotation: {x: -0, y: -0, z: -0.5, w: 0.8660254}
+  - prefab: 1
+    positionZ: 4
+    speed: -100
+    rotation: {x: -0, y: -0, z: -0.6427876, w: 0.7660445}
+  - prefab: 1
+    positionZ: 5
+    speed: -100
+    rotation: {x: -0, y: -0, z: -0.7660445, w: 0.64278764}
+  - prefab: 1
+    positionZ: 6
+    speed: -100
+    rotation: {x: -0, y: -0, z: -0.86602545, w: 0.49999994}
+  - prefab: 1
+    positionZ: 7
+    speed: -100
+    rotation: {x: -0, y: -0, z: -0.9396926, w: 0.34202018}
+  - prefab: 1
+    positionZ: 8
+    speed: -100
+    rotation: {x: -0, y: -0, z: -0.9848078, w: 0.17364825}
+  - prefab: 1
+    positionZ: 9
+    speed: -100
+    rotation: {x: -0, y: -0, z: -1, w: 0}
+  - prefab: 1
+    positionZ: 8
+    speed: -100
+    rotation: {x: -0, y: -0, z: -0.9848078, w: 0.17364825}
+  - prefab: 1
+    positionZ: 10
+    speed: -100
+    rotation: {x: -0, y: -0, z: -0.9848078, w: -0.17364807}
+  - prefab: 1
+    positionZ: 11
+    speed: -100
+    rotation: {x: -0, y: -0, z: -0.9396927, w: -0.34202012}
