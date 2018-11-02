@@ -9,6 +9,7 @@ public class CombinationEditor : Editor {
 
     public override void OnInspectorGUI()
     {
+        patternGO = GameObject.Find("Combination Start");
         combination = (Combination)target;
 
         patternGO = (GameObject)EditorGUILayout.ObjectField(patternGO, typeof(GameObject), true);
