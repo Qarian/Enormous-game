@@ -215,7 +215,7 @@ MonoBehaviour:
   road: {fileID: 143009697}
   rb: {fileID: 59919533}
   normalSpeed: -2
-  boostSpeed: 16
+  boostSpeed: 20
   rotationSpeed: 45
   acceleration: 2
 --- !u!54 &59919533
@@ -438,7 +438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &534669903
 AudioListener:
   m_ObjectHideFlags: 0
@@ -671,7 +671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1124917393
 Transform:
   m_ObjectHideFlags: 0
@@ -824,10 +824,16 @@ MonoBehaviour:
   - {fileID: 1896679782100900, guid: e9de71763444b9b4682d15ac639beed0, type: 2}
   CombinationStartPrefab: {fileID: 1889291446148676, guid: 9805142a3666afe4fb1879d060f68f9a,
     type: 2}
+  colors:
+  - {r: 1, g: 0.39215687, b: 0.39215687, a: 1}
+  - {r: 0, g: 1, b: 1, a: 1}
+  - {r: 0.30980393, g: 1, b: 0, a: 1}
+  randomColors: 0
+  combinationsForColor: 1
   levels:
   - {fileID: 11400000, guid: 4177b089b9cbc3941b7f1cfe045087af, type: 2}
   startPosition: 0
-  combinationsLength: 4
+  combinationsLength: 8
   GenerateOnStart: 1
 --- !u!1001 &1409851871
 Prefab:
@@ -930,11 +936,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1826251116170466, guid: 9805142a3666afe4fb1879d060f68f9a, type: 2}
       propertyPath: m_TagString
-      value: Untagged
+      value: CombinationStart
       objectReference: {fileID: 0}
     - target: {fileID: 1889291446148676, guid: 9805142a3666afe4fb1879d060f68f9a, type: 2}
       propertyPath: m_TagString
-      value: Finish
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 65289004493317410, guid: 9805142a3666afe4fb1879d060f68f9a,
         type: 2}
@@ -943,7 +949,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1889291446148676, guid: 9805142a3666afe4fb1879d060f68f9a, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4706228701688846, guid: 9805142a3666afe4fb1879d060f68f9a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -955,7 +961,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1826251116170466, guid: 9805142a3666afe4fb1879d060f68f9a, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65289004493317410, guid: 9805142a3666afe4fb1879d060f68f9a, type: 2}
