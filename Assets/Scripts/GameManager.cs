@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
             Restart();
 	}
 
-    void Restart()
+    public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
