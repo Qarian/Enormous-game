@@ -9,15 +9,15 @@ public class CombinationEditor : Editor {
 
     public override void OnInspectorGUI()
     {
+        patternGO = GameObject.Find("Combination Start");
         combination = (Combination)target;
 
-        patternGO = GameObject.Find("Combination Start");
         patternGO = (GameObject)EditorGUILayout.ObjectField(patternGO, typeof(GameObject), true);
 
         if(GUILayout.Button("Assign combination"))
             MakeNewCombination();
 
-        GUILayout.Space(10f);
+        GUILayout.Space(4f);
         base.OnInspectorGUI();
     }
 
