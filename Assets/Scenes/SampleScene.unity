@@ -1203,4 +1203,7 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1893572590}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD:Assets/Scenes/SampleScene.unity
+>>>>>>> parent of f372fe0... Debug values:Assets/Scenes/SampleScene.unity
+=======
 >>>>>>> parent of f372fe0... Debug values:Assets/Scenes/SampleScene.unity
