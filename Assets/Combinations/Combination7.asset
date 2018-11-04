@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bcdf770a6e5e3f409f357b8af41a5c9, type: 3}
   m_Name: Combination7
   m_EditorClassIdentifier: 
-  freeSpace: 5
+  freeSpace: 4
   elements:
   - prefab: 3
     positionZ: 2
-    speed: 500
+    speed: 300
     rotation: {x: -0, y: -0, z: -0, w: 1}

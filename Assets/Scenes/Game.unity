@@ -1115,7 +1115,7 @@ MonoBehaviour:
   levels:
   - {fileID: 11400000, guid: bbbd974e8fe29ed4c8ff54702a7f1397, type: 2}
   - {fileID: 11400000, guid: 4177b089b9cbc3941b7f1cfe045087af, type: 2}
-  - {fileID: 11400000, guid: cf15686a6c6f5174db3b0994fa74ff3b, type: 2}
+  - {fileID: 11400000, guid: 7357bbe23b0cea540bdb8d3bfc8af2c6, type: 2}
   startPosition: 0
   combinationsLength: 3
   GenerateOnStart: 1
@@ -1520,5 +1520,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69bf8f6f1503be45887f845708e50b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 0}
+  text: {fileID: 0}
   valueId: 0
