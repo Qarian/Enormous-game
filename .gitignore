@@ -36,4 +36,4 @@ sysinfo.txt
 *.unitypackage
 
 #Folders
-./_My/
+./Assets/_My/
