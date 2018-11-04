@@ -15,14 +15,17 @@ public class DebugManager : MonoBehaviour {
             DontDestroyOnLoad(gameObject);
         }
         else
+        {
+            singleton.Start();
             Destroy(this);
+        }  
 
         values = new float[4];
         values[2] = -1f;
     }
     #endregion
 
-    private void Start()
+    public void Start()
     {
         if(SceneManager.GetActiveScene().buildIndex == 0)
         {

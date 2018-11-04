@@ -2014,7 +2014,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Normal Speed:'
+  m_Text: 'Acceleration:'
 --- !u!222 &1195607701
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2089,7 +2089,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Normal Speed:'
+  m_Text: 'Rotation Speed:'
 --- !u!222 &1202420016
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2873,7 +2873,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Normal Speed:'
+  m_Text: 'Boost Speed:'
 --- !u!222 &1657382296
 CanvasRenderer:
   m_ObjectHideFlags: 0
