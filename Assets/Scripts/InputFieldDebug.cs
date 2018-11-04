@@ -3,20 +3,19 @@ using UnityEngine.UI;
 
 public class InputFieldDebug : MonoBehaviour {
 
-    public InputField input;
+    public Text text;
     public int valueId;
 
     void Start()
     {
-        if (input != null)
-            input.text = DebugManager.singleton.values[valueId].ToString();
+        if (text != null)
+            text.text = DebugManager.singleton.values[valueId].ToString();
     }
 
-    public void ChangeValue(string text)
+    public void ChangeValue(int amount)
     {
-        float tmp;
-        if(float.TryParse(text, out tmp))
-        DebugManager.singleton.values[valueId] = tmp;
+        DebugManager.singleton.values[valueId] += amount;
+        text.text = DebugManager.singleton.values[valueId].ToString();
     }
 
     public void ChangeScene(int index)
