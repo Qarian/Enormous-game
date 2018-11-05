@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour {
         if (other.tag == "CombinationStart")
         {
             NextCombination();
+            Destroy(other.gameObject);
         }
             
         else

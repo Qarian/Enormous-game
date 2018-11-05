@@ -17,6 +17,9 @@ public class CombinationEditor : Editor {
         if(GUILayout.Button("Assign combination"))
             MakeNewCombination();
 
+        if (GUILayout.Button("Generate In Editor"))
+            GenerateInEditor();
+
         GUILayout.Space(10f);
         base.OnInspectorGUI();
     }
@@ -45,4 +48,18 @@ public class CombinationEditor : Editor {
         }
     }
 
+    void GenerateInEditor()
+    {
+        Generator gen = FindObjectOfType<Generator>();
+
+        Transform combinations = Instantiate(gen.CombinationStartPrefab, Vector3.zero, Quaternion.identity, null).transform;
+
+        for (int i = 0; i < combination.elements.Length; i++)
+        {
+            Vector3 pos = new Vector3(0, 0, combination.elements[i].positionZ);
+            Quaternion rotation = combination.elements[i].rotation;
+            Blockade blockade = Instantiate(gen.obstackles[combination.elements[i].prefab], pos, rotation, combinations).GetComponent<Blockade>();
+            blockade.speed = combination.elements[i].speed;
+        }
+    }
 }
